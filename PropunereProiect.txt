@@ -1,0 +1,6 @@
+	Aplicatie tip getPony
+
+
+Implementati o aplicatie client-server pentru a inchiria o masina Pony, Aceasta aplicatie poate fi utilizata atat de clienti cat si de un administrator. Aplicatia va permite unui client sa vizualize masinile disponibile(caracteristicile masinii,locatia),preturile percepute,dar si ofertele promotionale. Pentru a putea accesa masina, clientul trebuie sa isi completeze datele personale(date de identificare, de contact, datele contului si datele permisului auto). Dupa completarea datelor, clientul va primi de la administrator un cod unic, prin care va putea accesa masina.
+
+Aplicatia va avea operatii CRUD asupra clientilor si masinilor.

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" th:src="@{/css/style.css}" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul class="nav">
+            <li><a th:href="index" class="icon home"><span>Home</span></a></li>
+            <li class="dropdown">
+                <a th:href="index">Cars</a>
+                <ul>
+                    <li><a th:href="viewCars">View Cars</a></li>
+                    <li><a th:href="addCar">Add Car</a></li> <!-- doar pt admin -->
+                    <li><a th:href="updateCar">Update Car</a></li><!-- doar pt admin -->
+                    <li><a th:href="deleteCar">Delete Car</a></li><!-- doar pt admin -->
+                    <li><a th:href="addReview">Add reviews</a></li>
+                    <li ><a th:href="searchM">Search by model</a></li>
+                    <li ><a th:href="searchP">Search by price</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a th:href="index">Accounts</a>
+                <ul class="large"><!-- pentru user -->
+                    <li><a th:href="deleteUser">Delete Account</a></li>
+                    <li><a th:href="viewUser">View Account</a></li> <!-- si pentru admin -->
+                    <li><a th:href="updateUser">Update Account</a></li><!-- si pt admin -->
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a th:href="index">Rent a car</a>
+                <ul class="large"><!-- doar pentru user -->
+                    <li><a th:href="addRent">Rent</a></li>
+                    <li><a th:href="delRent">Delete Rent</a></li>
+                    <li><a th:href="viewRent">View Rent</a></li>
+                    <li><a th:href="updateRent">Update Rent</a></li>
+                </ul>
+            </li>
+            <li>
+                <a th:href="@{/logout}">Log Out</a><!--pentru toti-->
+            </li>
+            <li><a th:href="@{/getReport}">Report</a></li> <!--doar pentry admin-->
+        </ul>
+    </nav>
+</header>
+<p>
+    <div class="form">
+        <h1>Delete Rent</h1>
+        <form th:action="@{/delRent}" th:method="post">
+
+            <input type="text" name="search" id="search" placeholder="Search by code" required="required" />
+
+            <button type="submit" name="action" value="add">Delete</button>
+        </form>
+
+    </div>
+</p>
+</body>
+</html>
